@@ -27,6 +27,7 @@ function copyPassword(){
     document.execCommand("copy");
 }
 
+newPassword()
 button.addEventListener("click", ()=> {
     newPassword()
 })

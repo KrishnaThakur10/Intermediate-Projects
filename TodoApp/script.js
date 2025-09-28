@@ -2,7 +2,7 @@ const inputBox = document.querySelector("#input-box")
 const listCointainer = document.querySelector("#list-cointainer")
 const button = document.querySelector("button")
 
-button.addEventListener("click", function (e) {
+function addTask(){
     if (inputBox.value === "") {
         alert("Please enter a something");
     }
@@ -16,8 +16,15 @@ button.addEventListener("click", function (e) {
     }
     inputBox.value = "";
     saveData();
+}
+
+inputBox.addEventListener("keypress", (e)=>{
+    if(e.key === "Enter"){
+        addTask()
+    }
 })
 
+button.addEventListener("click", addTask)
 
 
 listCointainer.addEventListener("click", function (e) {
